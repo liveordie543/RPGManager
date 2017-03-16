@@ -1,0 +1,40 @@
+﻿<div class="container body-content">
+    <h2>Character Manager</h2>
+
+    <div id="charactersTbl">
+        <table>
+            <tr>
+                <th>Name</th>
+                <th>Race</th>
+                <th>Class</th>
+                <th>Level</th>
+                <th></th>
+            </tr>
+            <tbody data-ng-repeat="character in characters">
+                <tr>
+                    <td>{{character.Name}}</td>
+                    <td>{{character.Race}}</td>
+                    <td>{{character.Class}}</td>
+                    <td>{{character.Level}}</td>
+                    <td>
+                        <a href="#" ng-click="setActiveCharacter($event, character.Key)">Set as Active</a>
+                        |
+                        <a href="#" ng-click="deleteCharacter($event, character.Key)">Delete</a>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+
+        <!--<div class="form-group">
+            <label for="email">Subscribe here</label>
+            <input type="email" class="form-control" id="email" placeholder="Enter email" [required="string" ] data-ng-model="mailId" />
+        </div>
+
+        <button type="button" class="btn btn-default" ng-click="addSubscriber($event)">Submit</button>-->
+    </div>
+
+    <hr />
+
+    <footer>
+    </footer>
+</div>

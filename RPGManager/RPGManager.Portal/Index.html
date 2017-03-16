@@ -1,0 +1,56 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width" />
+
+    <title>RPG Manager</title>
+
+    <link href="Content/Styles/bootstrap.css" rel="stylesheet" />
+    <link href="Content/Styles/bootstrap-theme.css" rel="stylesheet" />
+    <link href="Content/Styles/site.css" rel="stylesheet" />
+</head>
+
+<body ng-app="rpgManagerApp" ng-controller="mainController">
+    <div class="navbar navbar-inverse navbar-fixed-top">
+        <div class="container">
+            <div class="navbar-header">
+                <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-collapse">
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                    <span class="icon-bar"></span>
+                </button>
+                <a class="navbar-brand" href="#" ng-click="homeClick($event)">RPG Manager</a>
+            </div>
+            <div class="navbar-collapse collapse">
+                <ul class="nav navbar-nav">
+                    <li><a href="#" ng-click="characterClick($event)">Character</a></li>
+                    <li><a href="#" ng-click="notesClick($event)">Notes</a></li>
+                    <li><a href="#" ng-click="mapsClick($event)">Maps</a></li>
+                    <li><a href="#" ng-click="messagesClick($event)">Messages</a></li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
+    <div id="mainArea">
+        <div ng-view></div>
+    </div>
+
+    <script src="Content/Scripts/jquery.js"></script>
+    <script src="Content/Scripts/angular.js"></script>
+    <script src="Content/Scripts/angular-route.js"></script>
+    <script src="Content/Scripts/bootstrap.js"></script>
+
+    <script src="Angular/Modules/main.module.js"></script>
+
+    <script src="Angular/Services/main.service.js"></script>
+
+    <script src="Angular/Controllers/main.controller.js"></script>
+    <script src="Angular/Controllers/characterManager.controller.js"></script>
+    <script src="Angular/Controllers/character.controller.js"></script>
+    <script src="Angular/Controllers/notes.controller.js"></script> 
+    <script src="Angular/Controllers/maps.controller.js"></script>
+    <script src="Angular/Controllers/messages.controller.js"></script>
+</body>
+</html>
