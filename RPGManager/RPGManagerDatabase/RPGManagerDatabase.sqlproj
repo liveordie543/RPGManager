@@ -76,6 +76,10 @@
     <Build Include="dbo\Tables\5eCharacterAlliesAndOrganizations.sql" />
     <Build Include="dbo\Tables\5eCharacterSpells.sql" />
     <Build Include="dbo\Tables\5eCharacterSpellSlots.sql" />
+    <Build Include="dbo\Programmability\Stored Procedures\DeleteCharacter5eByKey.sql" />
+    <Build Include="dbo\Programmability\Stored Procedures\GetCharacter5eByKey.sql" />
+    <Build Include="dbo\Programmability\Stored Procedures\GetCharacterAttacksAndSpellcasts5e.sql" />
+    <Build Include="dbo\Programmability\Stored Procedures\AddOrUpdateCharacter5e.sql" />
   </ItemGroup>
   <ItemGroup>
     <PostDeploy Include="Script.PostDeployment.sql" />

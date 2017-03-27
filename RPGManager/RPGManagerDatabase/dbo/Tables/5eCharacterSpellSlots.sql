@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[5eCharacterSpellSlots]
 (
-	[CharacterId] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL PRIMARY KEY, 
     [0Max] INT NOT NULL, 
     [0Used] INT NOT NULL, 
     [1Max] INT NOT NULL, 

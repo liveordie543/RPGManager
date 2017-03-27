@@ -1,6 +1,6 @@
 ﻿CREATE TABLE [dbo].[5eCharacterSkills]
 (
-	[CharacterId] INT NOT NULL PRIMARY KEY, 
+	[Id] INT NOT NULL , 
     [Acrobatics] INT NOT NULL, 
 	[AcrobaticsIsProficient] BIT NOT NULL,
     [AnimalHandling] INT NOT NULL, 
@@ -36,5 +36,6 @@
     [Stealth] INT NOT NULL, 
 	[StealthIsProficient] BIT NOT NULL,
     [Survival] INT NOT NULL,
-	[SurvivalIsProficient] BIT NOT NULL
+	[SurvivalIsProficient] BIT NOT NULL, 
+    CONSTRAINT [PK_5eCharacterSkills] PRIMARY KEY ([Id])
 )

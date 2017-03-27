@@ -1,4 +1,4 @@
-﻿CREATE TABLE [dbo].[tbl_Subscribers] (
+﻿CREATE TABLE [dbo].[5eCharacters] (
     [Id]   INT           NOT NULL IDENTITY,
 	[Key] UNIQUEIDENTIFIER NOT NULL,
     [Name]         NVARCHAR (64) NOT NULL,
@@ -17,6 +17,8 @@
     [Charisma] INT NOT NULL, 
     [Inspiration] INT NOT NULL, 
     [ProficiencyBonus] INT NOT NULL, 
+	[SavingThrowsId] INT NOT NULL, 
+    [SkillsId] INT NOT NULL,
     [ArmorClass] INT NOT NULL, 
     [Initiative] INT NOT NULL, 
     [Speed] INT NOT NULL, 
@@ -27,6 +29,7 @@
     [HitDice] NVARCHAR(5) NOT NULL, 
     [SuccessDeathSaves] INT NOT NULL, 
     [FailedDeathSaves] INT NOT NULL, 
+	[MoneyId] INT NOT NULL, 
     [PersonalityTraits] NVARCHAR(256) NULL, 
     [Ideals] NVARCHAR(256) NULL, 
     [Bonds] NVARCHAR(256) NULL, 
@@ -42,9 +45,14 @@
     [SpellcastingAbility] INT NULL, 
     [SpellSaveDC] INT NULL, 
     [SpellAttackBonus] INT NULL, 
+	[SpellSlotsId] INT NOT NULL, 
     [AppearanceKey] UNIQUEIDENTIFIER NULL, 
-    [Backstory] NVARCHAR(MAX) NULL, 
+    [Backstory] NVARCHAR(MAX) NULL,  
     PRIMARY KEY CLUSTERED ([Id] ASC), 
-	CONSTRAINT [AK_5eCharacters_NoDuplicates] UNIQUE ([Key]) 
+	CONSTRAINT [AK_5eCharacters_NoDuplicates] UNIQUE ([Key]), 
+    CONSTRAINT [FK_5eCharacters_5eCharacterSavingThrows] FOREIGN KEY ([SavingThrowsId]) REFERENCES [5eCharacterSavingThrows]([Id]) ON DELETE CASCADE,
+	CONSTRAINT [FK_5eCharacters_5eCharacterSkills] FOREIGN KEY ([SkillsId]) REFERENCES [5eCharacterSkills]([Id]) ON DELETE CASCADE,
+	CONSTRAINT [FK_5eCharacters_5eCharacterMoney] FOREIGN KEY ([MoneyId]) REFERENCES [5eCharacterMoney]([Id]) ON DELETE CASCADE,
+	CONSTRAINT [FK_5eCharacters_5eCharacterSpellSlots] FOREIGN KEY ([SpellSlotsId]) REFERENCES [5eCharacterSpellSlots]([Id]) ON DELETE CASCADE
 );
 

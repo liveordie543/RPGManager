@@ -175,4 +175,46 @@
     <Property Name="ParentElementType" Value="SqlTable" />
     <Property Name="NewName" Value="Name" />
   </Operation>
+  <Operation Name="Rename Refactor" Key="670c68a6-e747-4254-8392-63f5ae7cedf2" ChangeDateTime="03/27/2017 17:13:43">
+    <Property Name="ElementName" Value="[dbo].[5eCharacterSkills].[CharacterId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[5eCharacterSkills]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="94993627-faba-4fba-b429-e2cd47d74b63" ChangeDateTime="03/27/2017 18:03:09">
+    <Property Name="ElementName" Value="[dbo].[5eCharacterSavingThrows].[CharacterId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[5eCharacterSavingThrows]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="55a987ac-1de8-451a-b79c-3ceb5b44cc84" ChangeDateTime="03/27/2017 18:03:39">
+    <Property Name="ElementName" Value="[dbo].[5eCharacterMoney].[CharacterId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[5eCharacterMoney]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="ccd2960e-c041-4055-b4c8-d8991341a388" ChangeDateTime="03/27/2017 18:04:14">
+    <Property Name="ElementName" Value="[dbo].[5eCharacterSpellSlots].[CharacterId]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[5eCharacterSpellSlots]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="Id" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="6ff9ec56-e025-43dd-aaec-88eb3fdda171" ChangeDateTime="03/27/2017 18:40:09">
+    <Property Name="ElementName" Value="[dbo].[5eCharacters].[Money]" />
+    <Property Name="ElementType" Value="SqlSimpleColumn" />
+    <Property Name="ParentElementName" Value="[dbo].[5eCharacters]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="MoneyId" />
+  </Operation>
+  <Operation Name="Rename Refactor" Key="296a2e4c-7b2b-4e3f-9353-9fd78b977285" ChangeDateTime="03/27/2017 18:57:31">
+    <Property Name="ElementName" Value="[dbo].[FK_5eCharacters_ToTable]" />
+    <Property Name="ElementType" Value="SqlForeignKeyConstraint" />
+    <Property Name="ParentElementName" Value="[dbo].[5eCharacters]" />
+    <Property Name="ParentElementType" Value="SqlTable" />
+    <Property Name="NewName" Value="[FK_5eCharacters_5eCharacterSavingThrows]" />
+  </Operation>
 </Operations>
